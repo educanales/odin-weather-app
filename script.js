@@ -29,5 +29,4 @@ function displayData() {
   
 }
 
-// getData("Dublin");
 processData("New York");
