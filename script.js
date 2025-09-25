@@ -15,18 +15,20 @@ async function getData(location) {
 async function processData(location) {
   const data = await getData(location);
   const weatherData = [{
-    address : data.address,
+    address : data.resolvedAddress,
     temp : data.currentConditions.temp,
     description : data.description,
+    icon: data.days[0].icon,
   }]
-  console.log(weatherData);
+  // console.log(weatherData);
   console.log(weatherData[0].address);
   console.log(weatherData[0].temp);
   console.log(weatherData[0].description);
+  console.log(weatherData[0].icon);
 }
 
 function displayData() {
   
 }
 
-processData("New York");
+processData("Pudahuel");
