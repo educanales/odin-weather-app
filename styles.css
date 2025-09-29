@@ -48,13 +48,34 @@ h1, h2, h3, h4, h5, h6 {
 
 /* General */
 
-body {
-  display: flex;
-  flex-direction: column;
-  /* align-items: center; */
+header {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  /* justify-content: center; */
+  margin: 1rem 2rem;
+  /* max-width: 1000px; */
 }
 
-header,
+h1 {
+  margin: 0 auto;
+  /* margin-right: auto; */
+  /* margin-left: 2rem; */
+}
+
+.search-bar {
+  margin: 0 auto;
+  /* margin-right: auto; */
+}
+
 main {
   margin: 1rem auto;
+}
+
+.weather-container {
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 }
