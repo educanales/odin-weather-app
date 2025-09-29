@@ -20,15 +20,15 @@ async function processData(location) {
     description : data.description,
     icon: data.days[0].icon,
   }]
-  // console.log(weatherData);
+  return weatherData;
+}
+
+async function displayData(location) {
+  const weatherData = await processData(location);
   console.log(weatherData[0].address);
   console.log(weatherData[0].temp);
   console.log(weatherData[0].description);
   console.log(weatherData[0].icon);
 }
 
-function displayData() {
-  
-}
-
-processData("Pudahuel");
+displayData("Pudahuel");
