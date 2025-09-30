@@ -4,7 +4,7 @@ const form = document.querySelector("form");
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   let location = inputLocation.value;
-  // console.log(location);
+  inputLocation.value = "";
   displayData(location);
 });
 
@@ -33,10 +33,18 @@ async function processData(location) {
 
 async function displayData(location) {
   const weatherData = await processData(location);
+  const weatherLocation = document.querySelector(".weather-location");
+  const weatherTemp = document.querySelector(".weather-temp");
+  const weatherDescription = document.querySelector(".weather-description");
+
+  weatherLocation.textContent = `${weatherData[0].address}`;
+  weatherTemp.textContent = `${weatherData[0].temp}`;
+  weatherDescription.textContent = `${weatherData[0].description}`;
+
   console.log(weatherData[0].address);
   console.log(weatherData[0].temp);
   console.log(weatherData[0].description);
   console.log(weatherData[0].icon);
 }
 
-// displayData("Pudahuel");
+displayData("Pudahuel");
