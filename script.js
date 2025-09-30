@@ -1,4 +1,12 @@
-// https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/London,UK?key=${API_KEY}
+const inputLocation = document.getElementById("search-location");
+const form = document.querySelector("form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+  let location = inputLocation.value;
+  // console.log(location);
+  displayData(location);
+});
 
 async function getData(location) {
   const API_KEY = "BP242W9Z9DZAZ4TKRAWX6CTA7";
@@ -31,4 +39,4 @@ async function displayData(location) {
   console.log(weatherData[0].icon);
 }
 
-displayData("Pudahuel");
+// displayData("Pudahuel");
