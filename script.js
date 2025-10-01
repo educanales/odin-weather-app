@@ -34,10 +34,13 @@ async function processData(location) {
 async function displayData(location) {
   const weatherData = await processData(location);
   const weatherLocation = document.querySelector(".weather-location");
+  const weatherIcon = document.getElementById("icon");
   const weatherTemp = document.querySelector(".weather-temp");
   const weatherDescription = document.querySelector(".weather-description");
 
   weatherLocation.textContent = `${weatherData[0].address}`;
+  weatherIcon.alt = `${weatherData[0].icon}`;
+  weatherIcon.src = `./images/${weatherData[0].icon}.svg`;
   weatherTemp.textContent = `${weatherData[0].temp}ºC`;
   weatherDescription.textContent = `${weatherData[0].description}`;
 
