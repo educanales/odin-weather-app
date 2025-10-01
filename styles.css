@@ -79,3 +79,11 @@ main {
   align-items: center;
   gap: 1rem;
 }
+
+#icon {
+  width: 6rem;
+}
+
+.weather-temp {
+  font-size: 3rem;
+}
