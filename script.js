@@ -24,7 +24,7 @@ async function processData(location) {
   const data = await getData(location);
   const weatherData = [{
     address : data.resolvedAddress,
-    temp : data.currentConditions.temp,
+    temp : Math.round(data.currentConditions.temp),
     description : data.description,
     icon: data.days[0].icon,
   }]
@@ -38,7 +38,7 @@ async function displayData(location) {
   const weatherDescription = document.querySelector(".weather-description");
 
   weatherLocation.textContent = `${weatherData[0].address}`;
-  weatherTemp.textContent = `${weatherData[0].temp}`;
+  weatherTemp.textContent = `${weatherData[0].temp}ºC`;
   weatherDescription.textContent = `${weatherData[0].description}`;
 
   console.log(weatherData[0].address);
