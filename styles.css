@@ -58,18 +58,14 @@ header {
   grid-template-columns: 1fr 1fr 1fr;
   /* justify-content: center; */
   margin: 1rem 2rem;
-  /* max-width: 1000px; */
 }
 
 h1 {
   margin: 0 auto;
-  /* margin-right: auto; */
-  /* margin-left: 2rem; */
 }
 
 .search-bar {
   margin: 0 auto;
-  /* margin-right: auto; */
 }
 
 main {
